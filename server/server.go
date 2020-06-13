@@ -10,6 +10,8 @@ import (
 	"net/http"
 )
 
+
+
 const (
 	jwtLoginURL = "http://localhost:8080/login"
 	jwtAuthURL  = "http://localhost:8080/auth"
@@ -101,6 +103,7 @@ func StartServer() {
 	mux := http.NewServeMux()
 	mux.HandleFunc("/login", LoginHandler)
 	mux.HandleFunc("/resource", ResourceHandler)
+	mux.HandleFunc("/register", RegisterHandler)
 	log.Println("Now listening...")
 	http.ListenAndServe(":9090", nil)
 }
