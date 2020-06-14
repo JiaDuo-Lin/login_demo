@@ -3,7 +3,6 @@ package user
 import (
 	"encoding/json"
 	"errors"
-	"log"
 )
 
 type User struct {
@@ -12,11 +11,14 @@ type User struct {
 	Tags []string
 }
 
-type userInDB struct {
-	ID   int64  `gorm:"column:id; type:BIGINT(20); PRIMARY_KEY"`
-	Name string `gorm:"column:name; type:varchar(100)"`
-	Tags string `gorm:"column:tags; type:varchar(200)"`
+func NewUser(id int64, name string, tags []string) *User {
+	return &User{
+		ID:   id,
+		Name: name,
+		Tags: tags,
+	}
 }
+
 
 func (user *User) transform() *userInDB {
 	tags, _ := json.Marshal(user.Tags)
@@ -38,11 +40,9 @@ func (user *User) Load() (err error) {
 		return
 	}
 
-	user.Name = userDB.Name
-	if err = json.Unmarshal([]byte(userDB.Tags),
-		&user.Tags); err != nil {
-		log.Println(err)
-	}
+	newUser := userDB.transform()
+	user.Name = newUser.Name
+	user.Tags = newUser.Tags
 	return
 }
 
@@ -56,25 +56,7 @@ func (user *User) hasTags() bool {
 	return len(user.Tags) > 0
 }
 
-func (_ *userInDB) TableName() string {
-	return "user"
-}
 
-func (user *userInDB) transform() *User {
-	var tags []string
-	_ = json.Unmarshal([]byte(user.Tags), &tags)
-	return &User{
-		ID:   user.ID,
-		Name: user.Name,
-		Tags: tags,
-	}
-}
-
-func (user *userInDB) Add() {
-	if db.NewRecord(user) {
-		db.Create(user)
-	}
-}
 
 func loadById(id int64) (newUser *userInDB) {
 	db.First(newUser, id)

@@ -2,7 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1330ada-76be-40d3-8108-59eb399c0a3a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/jwt/jwt_server.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jwt/jwt_service.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jwt/jwt_service_iface.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proto/user_service.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/userDB.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/user_server.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/user_server_iface.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/user_service.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jwt/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/jwt/handler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jwt/jwt.go" beforeDir="false" afterPath="$PROJECT_DIR$/jwt/jwt.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/user/user.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,7 +31,7 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" path="D:/EnvTool/Go" />
+  <component name="GOROOT" path="/usr/local/go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -35,7 +50,14 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../桌面/mail_go" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RunManager" selected="Go Build.go build main.go">
     <configuration name="go build jwtTest.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
@@ -113,10 +135,11 @@
       <screen x="0" y="0" width="1440" height="960" />
     </state>
     <state x="431" y="116" key="#go_build_test.go/0.0.1440.960@0.0.1440.960" timestamp="1591947947183" />
-    <state x="501" y="236" key="FileChooserDialogImpl" timestamp="1591973547694">
-      <screen x="0" y="0" width="1440" height="960" />
+    <state x="752" y="354" key="FileChooserDialogImpl" timestamp="1592051317830">
+      <screen x="0" y="0" width="2160" height="1440" />
     </state>
     <state x="501" y="236" key="FileChooserDialogImpl/0.0.1440.960@0.0.1440.960" timestamp="1591973547694" />
+    <state x="752" y="354" key="FileChooserDialogImpl/0.0.2160.1440@0.0.2160.1440" timestamp="1592051317830" />
     <state width="1397" height="255" key="GridCell.Tab.0.bottom" timestamp="1592038551839">
       <screen x="0" y="0" width="1440" height="960" />
     </state>

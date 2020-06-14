@@ -11,6 +11,8 @@ const (
 	ExpireDuration = time.Second * time.Duration(300) // 过期时间长度
 )
 
+type JWT struct{}
+
 type Token struct {
 	Token string `json:"token"`
 }
@@ -35,9 +37,19 @@ func CreateToken(userName string, id int64) (*Token, error) {
 }
 
 // ParseToken 解析Token
-func ParseToken(tokenSrt string) (token *jwt.Token, err error) {
-	token, err = jwt.Parse(tokenSrt, func(*jwt.Token) (interface{}, error) {
+func ParseToken(tokenStr string) (token *jwt.Token, err error) {
+	token, err = jwt.Parse(tokenStr, func(*jwt.Token) (interface{}, error) {
 		return []byte(SecretKey), nil
 	})
 	return
+}
+
+func CheckToken(tokenStr string) bool {
+	token, err := ParseToken(tokenStr)
+	// 过期、无法识别等其他错误
+	if err != nil || !token.Valid {
+		writeUnauthorizedStatus(w, Unauthorized)
+		return false
+	}
+	return true
 }

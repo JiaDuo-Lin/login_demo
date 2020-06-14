@@ -16,7 +16,7 @@ const (
 
 type UserCredentials struct {
 	UserName string `json:"username"`
-	ID       int64 `json:"id"`
+	ID       int64  `json:"id"`
 }
 
 func LoginHandler(w http.ResponseWriter, r *http.Request) {
@@ -36,9 +36,9 @@ func LoginHandler(w http.ResponseWriter, r *http.Request) {
 
 // ValidateTokenHandler
 func ValidateTokenHandler(w http.ResponseWriter, r *http.Request) {
-	token, err := ParseToken(r.Header.Get("Authorization")[7:])
+	//token, err := ParseToken(r.Header.Get("Authorization")[7:])
 	// 过期、无法识别等其他错误
-	if err != nil || !token.Valid {
+	if !CheckToken(r.Header.Get("Authorization")[7:]) {
 		writeUnauthorizedStatus(w, Unauthorized)
 		return
 	}
@@ -68,7 +68,6 @@ func JsonResponse(response interface{}, w http.ResponseWriter) {
 	w.Header().Set("Content-Type", "application/json")
 	w.Write(jsonResponse)
 }
-
 
 func StartServer() {
 	mux := http.NewServeMux()

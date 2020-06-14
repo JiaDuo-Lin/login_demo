@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package login_demo;
+
+option go_package = ".;proto";
+
+service JWTService {
+    rpc CreateToken(CreateTokenRequest) returns (CreateTokenResponse){};
+    rpc CheckToken(CheckTokenRequest) returns (CheckTokenResponse){}
+}
+
+
+message CreateTokenRequest {
+    int64 id=1;
+    string name=2;
+}
+
+message CreateTokenResponse{
+    string token=1;
+}
+
+message CheckTokenRequest{
+    string token=1;
+}
+
+
+
+message CheckTokenResponse{
+    bool result=1;
+}
