@@ -2,22 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1330ada-76be-40d3-8108-59eb399c0a3a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/jwt/jwt_server.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jwt/jwt_service.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jwt/jwt_service_iface.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proto/user_service.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/userDB.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/user_server.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/user_server_iface.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/user_service.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jwt/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/jwt/handler.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jwt/jwt.go" beforeDir="false" afterPath="$PROJECT_DIR$/jwt/jwt.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/user/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proto/service.proto" beforeDir="false" afterPath="$PROJECT_DIR$/proto/service.proto" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

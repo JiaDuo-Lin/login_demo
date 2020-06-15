@@ -1,0 +1,56 @@
+syntax = "proto3";
+
+package login_demo;
+
+option go_package = ".;proto";
+
+service JWTService {
+    rpc CreateToken(CreateTokenRequest) returns (CreateTokenResponse){};
+    rpc CheckToken(CheckTokenRequest) returns (CheckTokenResponse){};
+    rpc Register(RegisterRequest) returns (RegisterResponse){}; // 注册微服务
+    rpc Login(LoginRequest) returns (LoginResponse){} // 登录微服务
+}
+
+message User {
+    int64 id=1;
+    string name=2;
+    repeated string tags=3;
+}
+
+
+message CreateTokenRequest {
+    int64 id=1;
+    string name=2;
+}
+
+message CreateTokenResponse{
+    string token=1;
+}
+
+message CheckTokenRequest{
+    string token=1;
+}
+
+
+
+message CheckTokenResponse{
+    bool statusCode=1;
+}
+
+message RegisterRequest {
+    int64 id=1;
+}
+
+message RegisterResponse{
+    bool statusCode=1;
+}
+
+
+message LoginRequest {
+    int64 id=1;
+}
+
+message LoadResponse{
+    User user=1;
+    bool statusCode=2;
+}
