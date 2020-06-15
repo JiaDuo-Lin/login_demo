@@ -46,11 +46,11 @@ message RegisterResponse{
 }
 
 
-message LoginRequest {
+message LoginRequest{
     int64 id=1;
 }
 
-message LoadResponse{
+message LoginResponse{
     User user=1;
     bool statusCode=2;
 }
